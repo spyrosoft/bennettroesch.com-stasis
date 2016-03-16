@@ -1,0 +1,27 @@
+!!! 5
+<html class='no-js' lang='en-US'>
+%head
+	%meta{charset: 'utf-8'}
+	%title Title
+	%meta{'http-equiv' => 'x-ua-compatible', content: 'ie=edge'}
+	%meta{name: 'viewport', content:'width=device-width, initial-scale=1'}
+	
+	%link{rel: 'shortcut icon', href: 'images/favicon.ico'}
+	
+	%meta{name: 'description', content: 'A starting point for developers using Foundation 6 for any purpose.'}
+	
+	%link{href: 'css/foundation.min.css', rel: 'stylesheet'}
+	%link{href: 'css/app.css', rel: 'stylesheet'}
+%body
+	.off-canvas-wrapper
+		.off-canvas-wrapper-inner{'data-off-canvas-wrapper' => true}
+			.off-canvas-content.invert{'data-off-canvas-content' => true}
+				.float-left{'data-toggle' => 'main-navigation'}
+					%button.menu-icon
+				%div= yield
+			#main-navigation.off-canvas.position-left{'data-off-canvas' => true}
+				render '_navigation.haml'
+	%script{src: 'js/jquery.min.js'}
+	%script{src: 'js/what-input.min.js'}
+	%script{src: 'js/foundation.min.js'}
+	%script{src: 'js/app.js'}
