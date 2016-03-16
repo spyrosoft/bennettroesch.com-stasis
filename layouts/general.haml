@@ -20,7 +20,7 @@
 					%button.menu-icon
 				%div= yield
 			#main-navigation.off-canvas.position-left{'data-off-canvas' => true}
-				render '_navigation.haml'
+				%div= render 'snippets/_navigation.haml'
 	%script{src: 'js/jquery.min.js'}
 	%script{src: 'js/what-input.min.js'}
 	%script{src: 'js/foundation.min.js'}
